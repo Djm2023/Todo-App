@@ -37,7 +37,6 @@ app.get('/',async function(req,res){
 // Create the form using POST http method.
 app.post('/create-todo' , async function(req,res){
 
-    console.log(req.body);
     await Todo.create({
         description : req.body.description,
         category : req.body.category,
