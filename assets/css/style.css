@@ -1,0 +1,119 @@
+.h2 h2{
+  text-align: center;
+  color: grey;
+}
+.des-heading{
+/* border: 1px solid red; */
+margin-left: 0.9rem;
+}
+.des-heading h6{
+  color: grey;
+}
+.des-heading input{
+  width: 90vw;
+  height: 8vh;
+  border: 0;
+  outline: 0;
+  padding-left: 0.8rem;
+  font-size: 1.3rem;
+}
+.task-info{
+  width: 90vw;
+  height: 12vh;
+  margin-left: 0.9rem;
+  display: flex;
+  /* border: 1px solid blue; */
+}
+.task-info .category{
+  width: 50vw;
+  height: 100%;
+  padding-left: 0.8rem;
+  margin-left: 2.5rem;
+  border: 1px solid grey;
+}
+.task-info .category-heading h6{
+  color: grey;
+}
+.task-info .category select{
+  border: 0;
+  outline: 0;
+}
+.task-info .date{
+  width: 50vw;
+  height: 100%;
+  padding-left: 0.8rem;
+  border: 1px solid grey;
+}
+
+.task-info .date h6{
+  color: grey;
+}
+.task-info .date input{
+  border: 0;
+  outline: 0;
+}
+.btn1{
+  width: 60vw;
+  /* border: 1px solid red; */
+  padding-left: 30vw;
+}
+.btn1 #add{
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  border: 0;
+  outline: 0;
+}
+.btn1 #add i{
+  padding: 0.5rem;
+}
+.btn2 {
+  width: 40vw;
+  /* border: 1px solid black; */
+  margin-left: 60vw;
+  margin-top: -3.1rem;
+}
+.btn2 #delete{
+  padding: 0.5rem;
+  color: white;
+  border: 0;
+  outline: 0;
+  background-color: #ee351e;
+}
+.btn2 #delete i{
+  padding: 0.5rem;
+}
+.info{
+  width: 80vw;
+  height: 10vh;
+  margin-left: 7vw;
+  /* border: 1px solid red; */
+  margin-bottom: 0.6rem;
+  
+}
+.info .info-container{
+  height: 100%;
+  width: 100vw;
+  display: flex;
+}
+.info .info-container .checkbox{
+  width: 10vw;
+  height: 100%;
+  padding-left: 0.3rem;
+}
+.info .info-container .checkbox input{
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.info .info-container .added-des{
+  width:60vw;
+  height: 100%;
+}
+.info .info-container .cat{
+  width: 20vw;
+  height: 100%;
+}
+
+
+
+

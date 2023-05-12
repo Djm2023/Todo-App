@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Render title from index.js -->
+    <title>
+        <%= title%>
+    </title>
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Fontawesome link -->
+    <script src="https://kit.fontawesome.com/61f7c2891e.js" crossorigin="anonymous"></script>
+    <!-- Link the Style page from assets folder -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Heading of the Project Todo-App -->
+    <div class="heading">
+        <div class="h2">
+            <h2>TODO App</h2>
+            <hr>
+        </div>
+    </div>
+    <!-- Create a form which includes Description,Category,Date and Add task button -->
+    <form action="/create-todo" method="post">
+        <div class="des-info">
+            <div class="des-heading">
+                <h6>DESCRIPTION</h6>
+                <input type="text" name="description" placeholder="What do you need to do?">
+            </div>
+        </div>
+        <hr>
+        <div class="task-info">
+            <div class="category">
+                <div class="category-heading">
+                    <h6>CATEGORY</h6>
+                </div>
+                <!-- Create dropdown lists for Category -->
+              <select name="category" id="category">
+                <option>Choose a category</option>
+                <option value="PERSONAL">PERSONAL</option>
+                <option value="SCHOOL">SCHOOL</option>
+                <option value="OFFICE">OFFICE</option>
+                <option value="CLEANING">CLEANING</option>
+                <option value="WORK">WORK</option>
+                <option value="OTHER">OTHER</option>
+              </select>
+              </div>
+              <!-- For date -->
+            <div class="date">
+                <div class="due-date">
+                    <h6>DUE DATE</h6>
+                </div>
+                <input type="date" name="date">
+            </div>
+         
+        </div>
+        <hr>
+        <!-- Make a Add Task Button -->
+        <div class="btn1">
+          <button type="submit" id="add"><i class="fa-solid fa-plus"></i>Add Tasks</button>
+        </div>
+    </form>
+    <!-- Create a form for delete functionality -->
+    <form action="/delete-todo" method="get">
+        <!-- Make Delete Task button. -->
+        <div class="btn2">
+            <button type="submit" id="delete"><i class="fa-solid fa-trash"></i>Delete Task</button>
+        </div>
+        <hr>
+        <!-- Iterating over the data fed by User -->
+        <%for(let i of Todo_data){%>
+        <div class="info">
+            <div class="info-container">
+                    <div class="checkbox">
+                      <input type="checkbox" name="<%= i.id%>">
+                    </div>
+                    <div class="added-des">
+                      <p><%=i.description%></p>
+                      <p><%=i.date%></p>
+                     </div>
+                     <div class="cat">
+                       <p><%= i.category%></p>
+                      </div>
+                    </div>
+                </div>
+                <hr>
+                <%}%>
+    </form>
+
+
+    <!-- Link the javascript file from assets folder. -->
+    <script src="/javascript/script.js"></script>
+    
+    <!-- Link of script file for bootstrap. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+</body>
+</html>
